@@ -1,0 +1,273 @@
+/* ===========================
+   PUNJABI TADKA VIBRANT THEME
+   =========================== */
+
+:root{
+  /* Vibrant Indian Spice Palette */
+  --spice-red: #e63946;
+  --spice-dark: #b22c36;
+
+  --sun-orange: #ff7f1f;
+  --sun-yellow: #f9c80e;
+
+  --royal-purple: #6a00f4;
+  --royal-deep: #3b0094;
+
+  --mint-green: #1dd3b0;
+  --mint-dark: #0d9e84;
+
+  --background-top: #fff3e6;
+  --background-bottom: #ffe2d1;
+
+  --card-bg: rgba(255,255,255,0.85);
+  --radius: 18px;
+
+/* BODY WITH RICH BACKDROP */
+/* ===========================
+   FULLSCREEN DESERT BACKGROUND
+   =========================== */
+body{
+  margin:0;
+  font-family:Arial, sans-serif;
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  position:relative;
+  overflow-x:hidden;
+
+  /* Background image */
+  background: url("bg.png") center/cover no-repeat fixed;
+}
+
+/* soft dark gradient overlay */
+body::after{
+  content:"";
+  position:fixed;
+  inset:0;
+  background: linear-gradient(
+      180deg,
+      rgba(0,0,0,0.35),
+      rgba(0,0,0,0.60)
+  );
+  z-index:-1;
+}
+
+/* floating movement effect (parallax zoom) */
+@keyframes bgZoom {
+  0% { transform: scale(1); }
+  100% { transform: scale(1.06); }
+}
+body{
+  animation:bgZoom 18s ease-in-out infinite alternate;
+}
+
+
+/* Container */
+.container{
+  max-width:1000px;
+  width:100%;
+  padding:24px;
+  text-align:center;
+}
+
+/* HEADER */
+.logo{
+  width:160px;
+  border-radius:18px;
+  animation: logoPop 3s infinite ease-in-out;
+}
+@keyframes logoPop {
+  0% { transform:scale(1); filter:drop-shadow(0 4px 12px rgba(255,128,0,0.2)); }
+  50% { transform:scale(1.05); filter:drop-shadow(0 10px 22px rgba(255,128,0,0.35)); }
+  100% { transform:scale(1); filter:drop-shadow(0 4px 12px rgba(255,128,0,0.2)); }
+}
+
+.brand-name{
+  font-size:30px;
+  font-weight:900;
+  background: linear-gradient(90deg, var(--spice-red), var(--sun-orange));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.brand-sub{
+  font-size:14px;
+  color:#333;
+}
+
+/* HERO CARD */
+.hero{
+  background: var(--card-bg);
+  padding:40px;
+  border-radius:var(--radius);
+  box-shadow:0 25px 60px rgba(0,0,0,0.13);
+  backdrop-filter: blur(8px);
+}
+.hero-title{
+  font-size:26px;
+  margin:0 0 12px 0;
+  background: linear-gradient(90deg, #d7004c, #ff8c21);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color:transparent;
+  font-weight:800;
+}
+}
+
+.hero-sub{
+  color:#444;
+  margin:0 auto 22px;
+  max-width:60ch;
+}
+
+/* BUTTON BASE */
+.buttons{
+  display:flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: nowrap;   /* ❗ prevents moving to next line */
+  margin-top: 20px;
+}
+.btn{
+  position:relative;
+  display:inline-block;
+  padding:14px 28px;
+  font-size:16px;
+  font-weight:700;
+  border:none;
+  border-radius:12px;
+  cursor:pointer;
+  overflow:hidden;
+  transition: all .3s ease;
+  min-width:180px;
+}
+/* PRIMARY BUTTON — orange + purple glow */
+.btn-primary{
+  background: linear-gradient(90deg, var(--sun-orange), var(--spice-red));
+  color:white;
+  box-shadow:0 12px 30px rgba(200,50,20,0.35);
+}
+.btn-primary::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background: linear-gradient(90deg, rgba(255,255,255,0.3), transparent);
+  transform: translateX(-110%);
+  transition: transform .5s ease;
+}
+.btn-primary:hover{
+  transform:translateY(-4px) scale(1.03);
+  box-shadow:0 22px 45px rgba(200,50,20,0.45);
+}
+.btn-primary:hover::after{
+  transform:translateX(0);
+}
+
+/* SECONDARY — mint green + purple outline morph */
+.btn-secondary{
+  background:white;
+  border:3px solid var(--royal-purple);
+  color:var(--royal-purple);
+}
+.btn-secondary:hover{
+  background: linear-gradient(90deg, var(--mint-green), var(--mint-dark));
+  color:white;
+  border-color:transparent;
+  box-shadow:0 16px 36px rgba(26,180,150,0.35);
+  transform:translateY(-4px);
+}
+
+/* MODAL */
+.modal{
+  position: fixed;
+  inset:0;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  pointer-events:none;
+  opacity:0;
+  transition:opacity .35s ease;
+}
+.modal.open{
+  opacity:1;
+  pointer-events:auto;
+}
+
+/* Backdrop */
+.modal-backdrop{
+  position:absolute;
+  inset:0;
+  background:rgba(0,0,0,0.45);
+  backdrop-filter:blur(4px);
+}
+
+/* Modal panel with slide + glow */
+.modal-panel{
+  position:relative;
+  background:white;
+  padding:26px;
+  border-radius:16px;
+  width:100%;
+  max-width:420px;
+  transform:translateY(40px) scale(.95);
+  opacity:0;
+  transition: all .4s cubic-bezier(.2,.9,.2,1);
+  box-shadow:0 28px 70px rgba(0,0,0,0.3),
+             0 0 20px rgba(255,145,0,0.25);
+}
+.modal.open .modal-panel{
+  transform:translateY(0) scale(1);
+  opacity:1;
+}
+
+/* Modal close */
+.modal-close{
+  position:absolute;
+  right:14px;
+  top:14px;
+  background:transparent;
+  border:none;
+  font-size:18px;
+  cursor:pointer;
+}
+
+/* Form */
+.catering-form label{
+  font-weight:700;
+  margin:10px 0 6px;
+  display:block;
+}
+
+.catering-form input,
+.catering-form textarea{
+  width:100%;
+  padding:12px;
+  border-radius:12px;
+  border:1px solid #ddd;
+  margin-bottom:12px;
+  background:white;
+}
+
+.btn.full{
+  width:100%;
+}
+
+.btn-ghost{
+  background:#f1f1f1;
+  border:1px solid #ccc;
+  color:#444;
+}
+.btn-ghost:hover{
+  background:#e7e7e7;
+  transform:translateY(-3px);
+}
+
+/* RESPONSIVE */
+@media(max-width:700px){
+  .logo{width:130px;}
+  .hero-title{font-size:22px;}
+  .btn{min-width:150px;}
+}

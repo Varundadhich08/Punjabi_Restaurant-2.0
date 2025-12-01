@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Shoe-Shoe — Our Location</title>
+  <meta name="description" content="Shoe-Shoe — Visit our shop at 123 Subhash Nagar, Shop No. 17. Click to call or get directions." />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --bg: linear-gradient(180deg,#e8f6ff 0%, #f8fbff 100%);
+      --card: #ffffffdd;
+      --accent: #0b76ef;
+      --muted: #4b5563;
+      --radius: 12px;
+      --maxw: 900px;
+    }
+
+    html,body{
+      height:100%;
+      margin:0;
+      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      background: var(--bg);
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      color:#0f172a;
+    }
+
+    .wrap{
+      max-width: var(--maxw);
+      margin: 2.25rem auto;
+      padding: 1rem;
+    }
+
+    header.site-header{
+      display:flex;
+      align-items:center;
+      gap:1rem;
+      margin-bottom:1.25rem;
+    }
+
+    .logo {
+      width:84px;
+      height:84px;
+      background: linear-gradient(135deg,#ffd7a6,#ff9a76);
+      border-radius:14px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-weight:700;
+      color:#2b2d6b;
+      box-shadow: 0 10px 30px rgba(43,45,107,0.06);
+      flex-shrink:0;
+    }
+
+    h1{
+      margin:0;
+      font-size:1.45rem;
+      color:#0b2545;
+      line-height:1.05;
+    }
+    .subtitle{
+      margin-top:6px;
+      color:var(--muted);
+      font-size:0.95rem;
+    }
+
+    main.card{
+      background:var(--card);
+      border-radius:var(--radius);
+      padding:1rem;
+      box-shadow: 0 10px 30px rgba(2,6,23,0.06);
+      border:1px solid rgba(10,18,36,0.04);
+    }
+
+    .grid{
+      display:grid;
+      gap:1rem;
+      grid-template-columns: 1fr;
+    }
+    @media(min-width:820px){
+      .grid{ grid-template-columns: 1fr 360px; align-items:start; }
+    }
+
+    .address {
+      font-size:1.05rem;
+      color:#0f172a;
+      font-weight:600;
+      margin-bottom:0.4rem;
+    }
+    .details p{
+      margin:0 0 .6rem 0;
+      color:var(--muted);
+      line-height:1.5;
+    }
+
+    .actions{
+      display:flex;
+      gap:.6rem;
+      margin-top:.6rem;
+      flex-wrap:wrap;
+    }
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      gap:.6rem;
+      padding:.52rem .8rem;
+      border-radius:10px;
+      text-decoration:none;
+      font-weight:600;
+      border:0;
+      cursor:pointer;
+    }
+    .btn-call{ background: linear-gradient(90deg,#0b76ef,#0066d6); color:white; box-shadow:0 8px 18px rgba(11,118,239,0.16);}
+    .btn-directions{ background:transparent; border:1px solid rgba(11,118,239,0.14); color:#0b76ef; }
+    .btn:focus{ outline:3px solid rgba(11,118,239,0.12); outline-offset:3px; }
+
+    .hours{
+      margin-top: .6rem;
+      display:flex;
+      gap:1rem;
+      flex-wrap:wrap;
+      color:var(--muted);
+      font-size:.95rem;
+    }
+
+    /* Map container */
+    .map-wrap{
+      border-radius: 10px;
+      overflow:hidden;
+      border:1px solid rgba(10,18,36,0.04);
+      box-shadow: 0 8px 26px rgba(2,6,23,0.06);
+    }
+    .map-wrap iframe{
+      width:100%;
+      height:320px;
+      border:0;
+      display:block;
+    }
+
+    footer{
+      margin-top:1rem;
+      color:var(--muted);
+      font-size:0.95rem;
+      text-align:center;
+    }
+
+    /* small decorative card for note */
+    .note{
+      margin-top:.8rem;
+      padding:.6rem;
+      background: linear-gradient(90deg,#fff8e6,#fffdf8);
+      border-radius:10px;
+      border:1px solid rgba(0,0,0,0.03);
+      color:#73531f;
+      font-weight:600;
+    }
+
+    /* accessible hidden text for screen readers */
+    .sr-only{ position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0; }
+
+  </style>
+</head>
+<body>
+  <div class="wrap">
+
+    <header class="site-header" role="banner">
+      <div class="logo" aria-hidden="true">S-S</div>
+      <div>
+        <h1>Our Location — Shoe-Shoe</h1>
+        <div class="subtitle">Comfortable shoes • Friendly service • Walk-ins welcome</div>
+      </div>
+    </header>
+
+    <main class="card" role="main" aria-labelledby="location-heading">
+      <div class="grid">
+        <section id="location-heading" class="details" aria-labelledby="address-label">
+          <div id="address-label" class="address">123 Subhash Nagar, Shop No. 17</div>
+          <p>Do visit us once — we have a great selection of casual and formal shoes for all ages. Friendly fitting advice and free in-store adjustments.</p>
+
+          <div class="hours" aria-label="Opening hours">
+            <div><strong>Open:</strong> Mon—Sun</div>
+            <div><strong>Hours:</strong> 10:00 AM — 8:00 PM</div>
+          </div>
+
+          <div class="actions" aria-hidden="false">
+            <a class="btn btn-call" href="tel:+911234567890" aria-label="Call Shoe Shoe at +91 12345 67890">📞 Call +91 12345 67890</a>
+
+            <a class="btn btn-directions" target="_blank" rel="noopener noreferrer"
+               href="https://www.google.com/maps/dir/?api=1&destination=123+Subhash+Nagar+Shop+No+17">
+              🧭 Get directions
+            </a>
+          </div>
+
+          <div class="note" role="note">
+            Tip: Best time to visit for quieter shopping is weekday mornings.
+          </div>
+        </section>
+
+        <aside class="map-wrap" aria-label="Map showing Shoe Shoe location">
+          <iframe
+            loading="lazy"
+            title="Map: Shoe Shoe — 123 Subhash Nagar Shop No. 17"
+            src="https://www.google.com/maps?q=123+subhash+nagar+shop+no+17&output=embed"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </aside>
+      </div>
+    </main>
+
+    <footer>
+      <div>© <span id="year"></span> Shoe-Shoe</div>
+      <div class="sr-only">Address: 123 Subhash Nagar, Shop Number 17.</div>
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
