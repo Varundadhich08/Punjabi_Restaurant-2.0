@@ -1,62 +1,44 @@
-# Punjabi_Restaurant-2.0
 # 🇮🇳 Punjabi Tadka — Restaurant Website 2.0
 
-A modern, vibrant, and responsive restaurant website for **Punjabi Tadka**, featuring a desert-themed background, stylish UI, smooth animations, and clean navigation.  
-The website includes:
-
-- A beautiful landing page with logo, hero section, and action buttons  
-- Explore Menu button (links to menu.html)  
-- Catering Services form (modal popup)  
-- Full-screen animated desert background  
-- Contact page with form (contact.html)  
-- Clean HTML + CSS structure  
-- Easy to expand with more pages (menu, services, gallery, bookings)
-## LIVE PREVIEW
-click here
-## 📁 Project Structure
-/project-root
-│
-├── index.html # Main homepage
-├── contact.html # Contact page with form
-├── menu.html # (Optional) Menu page to be created
-├── styles.css # Global styling, colors, animations
-├── bg.png # Desert background image
-├── logo.jpg # Punjabi Tadka logo
-└── README.md # Documentation
-
+A modern, vibrant, and responsive website for **Punjabi Tadka**, featuring a desert-themed background, stylish UI, smooth animations, and clean navigation.
 
 ---
 
-## 🎨 Features & Design
+## 🌐 LIVE PREVIEW  
+👉 **[Click here to view the live site](https://YOUR-USERNAME.github.io/Punjabi_Restaurant-2.0/)**  
+*(Replace `YOUR-USERNAME` with your GitHub username)*
+
+---
+
+## 📌 Features
 
 ### 🌅 Background
 - Fullscreen desert background (`bg.png`)
-- Soft dark overlay for text readability
+- Soft dark overlay
 - Gentle zoom animation for a premium feel
 
 ### 🖼 Logo
-- Logo appears at the top of each page
-- Smooth bounce animation and soft glow
+- Logo appears at top of every page
+- Smooth bounce animation + glow
 
 ### 🟠 Buttons
-Two main action buttons:
-- **Explore Menu** → opens *menu.html*
-- **Catering Services** → opens an animated modal form
+- **Explore Menu** → opens `menu.html`
+- **Catering Services** → opens animated modal form
 
-### 📨 Catering Form
+### 📩 Catering Services Form
 - Modal popup
-- Sliding + fading animation
-- Fields: Name, Phone, Date, Message
-- Demo submit alert
-- Cancel + close built in
+- Slide + fade animation  
+- Fields: Name, Phone, Date, Message  
+- Submit handler (demo alert)  
+- Cancel & close options  
 
-### 🧾 Contact Page (contact.html)
+### 🧾 Contact Page (`contact.html`)
 Includes:
 - Restaurant address  
-- Phone  
+- Phone number  
 - Email  
 - Clean contact form  
-- "Back to Home" link  
+- Back to Home button  
 
 ### ✨ Animations Used
 - Logo bounce  
@@ -64,6 +46,16 @@ Includes:
 - Background zoom  
 - Modal slide + fade  
 
-All animations disable automatically if the user prefers reduced motion.
+Animations automatically disable for users who prefer reduced motion.
+Punjabi_Restaurant-2.0/
+│
+├── index.html # Main homepage
+├── contact.html # Contact page with form
+├── menu.html # Menu page
+├── styles.css # Global styling, colors, animations
+├── bg.png # Desert background image
+├── logo.jpg # Punjabi Tadka logo
+└── README.md # Documentation
 
+## 📁 Project Structure
 
