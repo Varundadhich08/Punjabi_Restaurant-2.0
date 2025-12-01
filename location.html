@@ -3,18 +3,19 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Shoe-Shoe — Our Location</title>
-  <meta name="description" content="Shoe-Shoe — Visit our shop at 123 Subhash Nagar, Shop No. 17. Click to call or get directions." />
+  <title>Punjabi Tadka — Our Location</title>
+  <meta name="description" content="Punjabi Tadka — Visit our restaurant. Click to call or get directions." />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 
   <style>
     :root{
-      --bg: linear-gradient(180deg,#e8f6ff 0%, #f8fbff 100%);
+      --bg: linear-gradient(180deg,#fff6f1 0%, #fff2ea 100%);
       --card: #ffffffdd;
-      --accent: #0b76ef;
-      --muted: #4b5563;
+      --accent: #d9492b; /* spice red */
+      --accent-2: #ff8b3b; /* orange */
+      --muted: #6b6772;
       --radius: 12px;
-      --maxw: 900px;
+      --maxw: 980px;
     }
 
     html,body{
@@ -24,7 +25,7 @@
       background: var(--bg);
       -webkit-font-smoothing:antialiased;
       -moz-osx-font-smoothing:grayscale;
-      color:#0f172a;
+      color:#1c1b1f;
     }
 
     .wrap{
@@ -41,23 +42,25 @@
     }
 
     .logo {
-      width:84px;
-      height:84px;
-      background: linear-gradient(135deg,#ffd7a6,#ff9a76);
+      width:88px;
+      height:88px;
       border-radius:14px;
       display:flex;
       align-items:center;
       justify-content:center;
-      font-weight:700;
-      color:#2b2d6b;
-      box-shadow: 0 10px 30px rgba(43,45,107,0.06);
+      font-weight:800;
+      color:white;
+      background: linear-gradient(135deg,var(--accent),var(--accent-2));
+      box-shadow: 0 12px 30px rgba(217,73,43,0.16);
       flex-shrink:0;
+      font-family: "Baloo 2", Inter, sans-serif;
+      font-size:20px;
     }
 
     h1{
       margin:0;
-      font-size:1.45rem;
-      color:#0b2545;
+      font-size:1.5rem;
+      color:#2b1f1f;
       line-height:1.05;
     }
     .subtitle{
@@ -70,8 +73,8 @@
       background:var(--card);
       border-radius:var(--radius);
       padding:1rem;
-      box-shadow: 0 10px 30px rgba(2,6,23,0.06);
-      border:1px solid rgba(10,18,36,0.04);
+      box-shadow: 0 12px 36px rgba(20,18,18,0.06);
+      border:1px solid rgba(10,10,10,0.03);
     }
 
     .grid{
@@ -80,13 +83,13 @@
       grid-template-columns: 1fr;
     }
     @media(min-width:820px){
-      .grid{ grid-template-columns: 1fr 360px; align-items:start; }
+      .grid{ grid-template-columns: 1fr 380px; align-items:start; }
     }
 
     .address {
       font-size:1.05rem;
-      color:#0f172a;
-      font-weight:600;
+      color:#2b1f1f;
+      font-weight:700;
       margin-bottom:0.4rem;
     }
     .details p{
@@ -105,16 +108,26 @@
       display:inline-flex;
       align-items:center;
       gap:.6rem;
-      padding:.52rem .8rem;
+      padding:.56rem .9rem;
       border-radius:10px;
       text-decoration:none;
-      font-weight:600;
+      font-weight:700;
       border:0;
       cursor:pointer;
+      font-size:0.95rem;
     }
-    .btn-call{ background: linear-gradient(90deg,#0b76ef,#0066d6); color:white; box-shadow:0 8px 18px rgba(11,118,239,0.16);}
-    .btn-directions{ background:transparent; border:1px solid rgba(11,118,239,0.14); color:#0b76ef; }
-    .btn:focus{ outline:3px solid rgba(11,118,239,0.12); outline-offset:3px; }
+    .btn-call{
+      background: linear-gradient(90deg,var(--accent), var(--accent-2));
+      color:white;
+      box-shadow:0 10px 26px rgba(217,73,43,0.16);
+    }
+    .btn-directions{
+      background:transparent;
+      border:2px solid rgba(217,73,43,0.12);
+      color:var(--accent);
+      padding:.5rem .85rem;
+    }
+    .btn:focus{ outline:3px solid rgba(217,73,43,0.12); outline-offset:3px; }
 
     .hours{
       margin-top: .6rem;
@@ -127,14 +140,14 @@
 
     /* Map container */
     .map-wrap{
-      border-radius: 10px;
+      border-radius: 12px;
       overflow:hidden;
-      border:1px solid rgba(10,18,36,0.04);
-      box-shadow: 0 8px 26px rgba(2,6,23,0.06);
+      border:1px solid rgba(10,10,10,0.03);
+      box-shadow: 0 10px 30px rgba(10,10,20,0.06);
     }
     .map-wrap iframe{
       width:100%;
-      height:320px;
+      height:340px;
       border:0;
       display:block;
     }
@@ -153,64 +166,64 @@
       background: linear-gradient(90deg,#fff8e6,#fffdf8);
       border-radius:10px;
       border:1px solid rgba(0,0,0,0.03);
-      color:#73531f;
-      font-weight:600;
+      color:#7a4f1f;
+      font-weight:700;
     }
 
-    /* accessible hidden text for screen readers */
     .sr-only{ position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0; }
-
   </style>
 </head>
 <body>
   <div class="wrap">
 
     <header class="site-header" role="banner">
-      <div class="logo" aria-hidden="true">S-S</div>
+      <div class="logo" aria-hidden="true">RT</div>
       <div>
-        <h1>Our Location — Shoe-Shoe</h1>
-        <div class="subtitle">Comfortable shoes • Friendly service • Walk-ins welcome</div>
+        <h1>Our Location — Punjabi Tadka</h1>
+        <div class="subtitle">Bold Punjabi flavours • Rajasthani soul • Walk-ins welcome</div>
       </div>
     </header>
 
     <main class="card" role="main" aria-labelledby="location-heading">
       <div class="grid">
         <section id="location-heading" class="details" aria-labelledby="address-label">
-          <div id="address-label" class="address">123 Subhash Nagar, Shop No. 17</div>
-          <p>Do visit us once — we have a great selection of casual and formal shoes for all ages. Friendly fitting advice and free in-store adjustments.</p>
+          <!-- Replace this address with your exact street/shop if you want -->
+          <div id="address-label" class="address">123 Market Road, Shop No. 5, Jaipur, Rajasthan</div>
+
+          <p>Come taste our hearty Punjabi dishes with a Rajasthani twist — fresh rotis, slow-cooked dal, and seasonal specials. Casual dining, catering, and workshops available.</p>
 
           <div class="hours" aria-label="Opening hours">
             <div><strong>Open:</strong> Mon—Sun</div>
-            <div><strong>Hours:</strong> 10:00 AM — 8:00 PM</div>
+            <div><strong>Hours:</strong> 10:00 AM — 9:30 PM</div>
           </div>
 
           <div class="actions" aria-hidden="false">
-            <a class="btn btn-call" href="tel:+911234567890" aria-label="Call Shoe Shoe at +91 12345 67890">📞 Call +91 12345 67890</a>
+            <a class="btn btn-call" href="tel:+917000000000" aria-label="Call Punjabi Tadka at +91 70000 00000">📞 Call +91 70000 00000</a>
 
             <a class="btn btn-directions" target="_blank" rel="noopener noreferrer"
-               href="https://www.google.com/maps/dir/?api=1&destination=123+Subhash+Nagar+Shop+No+17">
+               href="https://www.google.com/maps/dir/?api=1&destination=123+Market+Road+Shop+No+5+Jaipur+Rajasthan">
               🧭 Get directions
             </a>
           </div>
 
           <div class="note" role="note">
-            Tip: Best time to visit for quieter shopping is weekday mornings.
+            Tip: Weekday mornings are quieter for a relaxed dining experience.
           </div>
         </section>
 
-        <aside class="map-wrap" aria-label="Map showing Shoe Shoe location">
+        <aside class="map-wrap" aria-label="Map showing Punjabi Tadka location">
           <iframe
             loading="lazy"
-            title="Map: Shoe Shoe — 123 Subhash Nagar Shop No. 17"
-            src="https://www.google.com/maps?q=123+subhash+nagar+shop+no+17&output=embed"
+            title="Map: Punjabi Tadka — 123 Market Road Shop No. 5, Jaipur"
+            src="https://www.google.com/maps?q=123+Market+Road+Shop+No+5+Jaipur+Rajasthan&output=embed"
             referrerpolicy="no-referrer-when-downgrade"></iframe>
         </aside>
       </div>
     </main>
 
     <footer>
-      <div>© <span id="year"></span> Shoe-Shoe</div>
-      <div class="sr-only">Address: 123 Subhash Nagar, Shop Number 17.</div>
+      <div>© <span id="year"></span> Punjabi Tadka</div>
+      <div class="sr-only">Address: 123 Market Road, Shop No. 5, Jaipur, Rajasthan.</div>
     </footer>
   </div>
 
