@@ -1,14 +1,11 @@
-# 🇮🇳 Punjabi Tadka — Restaurant Website 2.0
+# Punjabi Tadka — Restaurant Website 2.0
 
 A modern, vibrant, and responsive website for **Punjabi Tadka**, featuring a desert-themed background, stylish UI, smooth animations, and clean navigation.
 
 ---
 
-## 🌐 LIVE PREVIEW  
-👉 **[Click here to view the live site](https://YOUR-USERNAME.github.io/Punjabi_Restaurant-2.0/)**  
-*(Replace `YOUR-USERNAME` with your GitHub username)*
-
----
+## 🌐 LIVE PREVIEW
+👉 **[Click here to view the live site](https://varundadhich08.github.io/Punjabi_Restaurant-2.0/)**
 
 ## 📌 Features
 
